@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteHub</title>
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+<body>
+    <main>
+        <div>
+            <img id="logo" src="../media/logo.jpeg" alt="Logo-ja e website">
+            <h2>Mire se erdhe!</h2>
+            <p>Mirë se erdhët në platformën tonë të votimit online. Me vetëm disa hapa të thjeshtë, ju mund të bëheni pjesë aktive e 
+                vendimmarrjeve që ndikojnë në komunitetin tuaj. Sistemi ynë është krijuar për të garantuar një 
+                eksperiencë të sigurt, të shpejtë dhe të qartë për çdo përdorues, pavarësisht vendndodhjes. Bëhu pjesë e ndryshimit – voto sot me vetëm një klikim!</p>
+        </div>
+        <div> 
+            <h2>Regjistrohu</h2>
+            <form action="#" method="get">
+                <label for="name">Emri*</label>
+                <input type="text" name="name" id="name" autofocus autocomplete="name" pattern="^[a-zA-Z]{3}.*" required title="Emri duhet te nise me te pakten 3 shkronja" tabindex="1">
+                <br>
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="shembull@gmail.com" autocomplete="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Email-i duhet te permbaje '@' dhe '.'. Duhet te permbaje karaktere mes tyre dhe pas '.' te pakten dy karaktere." required tabindex="2">
+                <br>
+                <label for="telefon">Numri i telefonit*</label>
+                <input type="tel" name="telefon" id="telefon" pattern="[0-9]{3}-[0-9]{7}" placeholder="123-3456789" required tabindex="3">
+                <br>
+                <fieldset>
+                <legend>Gjinia*</legend>
+                <input type="radio" id="mashkull" name="gjinia" value="mashkull" required>
+                <label for="mashkull">Mashkull</label>
+                <input type="radio" id="femer" name="gjinia" value="femer" required>
+                <label for="femer">Femer</label>
+                </fieldset>
+                <label for="datelindja">Datelindja*</label>
+                <input type="date" name="datelindja" id="datelindja" required tabindex="4">
+                <br>
+                <label for="fjalekalimi">Fjalekalimi*</label>
+                <input type="password" name="fjalekalimi" id="fjalekalimi" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Fjalekalimi duhet te kete te pakten 8 karaktere nga te cilat te kete te pakten nje shkronje te madhe, nje shkronje te vogel, nje numer dhe nje karakter special." required tabindex="5">
+                <br>
+                <label for="konfirmoFjalekalimin">Konfirmo fjalekalimin*</label>
+                <input type="password" name="konfirmoFjalekalimin" id="konfirmoFjalekalimin" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Fjalekalimi duhet te kete te pakten 8 karaktere nga te cilat te kete te pakten nje shkronje te madhe, nje shkronje te vogel, nje numer dhe nje karakter special." required tabindex="6">
+                <br>
+
+                <details>
+                    <summary>Informacion shtese</summary>
+                    <fieldset>
+                        <legend>Per cfare doni ta perdorni website-in tone?</legend>
+                        <input type="checkbox" id="krijim" name="krijim" value="krijim">
+                        <label for="krijim">Per te krijuar votime</label>
+                        <br>
+                        <input type="checkbox" id="votim" name="votim" value="votim">
+                        <label for="votim">Per te votuar</label>
+                        <br>
+                        <input type="checkbox" id="eksplorim" name="eksplorim" value="eksplorim">
+                        <label for="eksplorim">Eksplorim</label>
+                        <br>
+                        <input type="checkbox" id="dickaTjeter" name="dickaTjeter" value="dickaTjeter">
+                        <label for="dickaTjeter">Arsye te tjera</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Ku degjuat per website-in tone?</legend>
+                        <input type="radio" id="rrjeteSociale" name="referimi" value="rrjeteSociale">
+                        <label for="rrjeteSociale">Rrjete sociale</label>
+                        <br>
+                        <input type="radio" id="teNjohur" name="referimi" value="teNjohur">
+                        <label for="teNjohur">Nga shoqeria ose familja</label>
+                        <br>
+                        <input type="radio" id="reklama" name="referimi" value="reklama">
+                        <label for="reklama">Reklama</label>
+                        <br>
+                        <input type="radio" id="tjeter" name="referimi" value="tjeter">
+                        <label for="tjeter">Nga burime te tjera</label>
+                        <br>
+                    </fieldset>
+
+                </details>
+                <p id="mesazhGabimi"></p>
+                <button type="reset">Pastro fushat</button>
+                <button type="submit" id="butoni">Regjistrohu</button>
+            </form>
+            <p>E ke nje llogari? <a href="login.html">Log in</a></p>
+        </div>
+    </main>
+    <script src="../javascript/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteHub</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <img id="logo" src="../media/logo.jpeg" alt="Logo-ja e website" width="75" height="40">
+        <nav>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul class="navbar">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="voto.html">Voto</a></li>
+                <li><a href="rezultatet.html">Rezultatet</a></li>
+                <li><a href="profili.html">Profili</a></li>
+                <li><a href="login.html">Shkycu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="hapsira-perdoruesit">
+                <h2>Mire se erdhet, <span id="emriPerdoruesit">Emer Perdoruesi</span>!</h2>
+                <p>Statusi: <span id="statusiPerdoruesit">Votues i verifikuar</span></p>
+            </div>
+            <div class="njoftimet">
+                <h3>Njoftime</h3>
+                <div id="listaNjoftimeve">
+                    <!-- Do te shfaqen njoftimet me JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Kalendari -->
+        <section>
+            <h2>Kalendari i njoftimeve</h2>
+            <div id="kalendari"></div>
+        </section>
+
+        <section>
+            <h2>Veprime te tjera</h2>
+            <div >
+                <button id="krijoVotim">Krijo votim te ri</button>
+                <button id="kerkoRezultatet">Shiko rezultatet</button>
+                <button id="ndryshoProfili">Edito profilin</button>
+                <button id="kerkoInfo">Kerko informacion</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 VoteHub. Krijuar nga grupi 4.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+    <script src="../javascript/dashboard.js"></script>
+</body>
+
+</html>

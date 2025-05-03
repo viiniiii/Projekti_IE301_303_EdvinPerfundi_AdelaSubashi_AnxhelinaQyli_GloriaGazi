@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ndrysho profilin - VoteHub</title>
+  <link rel="stylesheet" href="../css/ndryshoProfilin.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <img id="logo" src="../media/logo.jpeg" alt="Logo-ja e website" width="75" height="40">
+    <nav>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="voto.html">Voto</a></li>
+            <li><a href="rezultatet.html">Rezultatet</a></li>
+            <li><a href="profili.html">Profili</a></li>
+            <li><a href="login.html">Shkycu</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <main>
+    <div class="profili-container">
+      <h2>Ndrysho të dhënat e profilit</h2>
+
+      <!-- Zona e ngarkimit me Drag-and-Drop -->
+      <div id="zonaUpload" class="drop-zone">
+        <p>Kliko këtu ose tërhiq një foto për ta ngarkuar</p>
+        <input type="file" id="ngarkoFotografi" accept="image/*" class="file-input">
+        <img id="fotoProfili" src="../media/profilePicture.png" alt="Foto e Profilit" width="150">
+      </div>
+
+      <!-- Mesazhi për statusin e ruajtjes -->
+      <div id="mesazh"></div>
+
+      <form id="formaProfili">
+        <label for="emri">Emri</label>
+        <input type="text" id="emri" placeholder="Vendosni emrin tuaj" tabindex="1" maxlength="10" required />
+
+        <label for="mbiemri">Mbiemri</label>
+        <input type="text" id="mbiemri" placeholder="Vendosni mbiemrin tuaj" tabindex="2" maxlength="10" required/>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="gloria@example.com" tabindex="3" required/>
+
+        <label for="fjalekalimi">Ndrysho fjalëkalimin</label>
+        <input type="password" id="fjalekalimi" placeholder="Fjalëkalim i ri" tabindex="4" required />
+
+        <label for="bio">Bio</label>
+        <textarea id="bio" rows="4" placeholder="Shkruani diçka për veten tuaj..."></textarea>
+
+        <p><strong>Regjistruar më:</strong>  27 Prill 2025</p>
+
+        <button type="submit">Ruaj ndryshimet</button>
+        <button type="button" class="buton-fshi">Fshi llogarinë</button>
+
+        <div id="mesazh"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 VoteHub. Krijuar nga grupi 4.</p>
+  </footer>
+
+  <script src="../javascript/ndryshoProfilin.js"></script>
+</body>
+</html>

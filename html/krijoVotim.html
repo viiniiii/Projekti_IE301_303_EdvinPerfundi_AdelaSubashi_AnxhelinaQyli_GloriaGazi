@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteHub</title>
+    <link rel="stylesheet" href="../css/krijoVotim.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <img id="logo" src="../media/logo.jpeg" alt="Logo-ja e website" width="75" height="40">
+        <nav>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul class="navbar">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="voto.html">Voto</a></li>
+                <li><a href="rezultatet.html">Rezultatet</a></li>
+                <li><a href="profili.html">Profili</a></li>
+                <li><a href="login.html">Shkycu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="header">
+            <h1>Krijoni sondazhin tuaj te votave</h1>
+            <h2>Krijoni sondazhin tuaj te votave sipas kerkeses dhe shperndaje me te tjeret</h2>
+        </div>
+        <form id="sondazhi" method="get" action="#" autocomplete="on">
+
+            <div class="grup-inputesh">
+                <div class="input">
+                    <label for="emriSondazhit">Titulli *</label>
+                    <input type="text" id="emriSondazhit" name="emriSondazhit" required minlength="5" maxlength="100" placeholder="Vendos emrin e sondazhit" autofocus tabindex="1">
+                </div>
+                
+                <div class="input">
+                    <label for="pershkrimiSondazhit">Pershkrimi</label>
+                    <textarea id="pershkrimiSondazhit" name="pershkrimiSondazhit" rows="3" placeholder="Vendosni pershkrimin e sondazhit" maxlength="500" tabindex="2"></textarea>
+                </div>
+                                
+                <div class="input">
+                    <label>Lloji i sondazhit *</label>
+                    <div class="lloji-sondazhit">
+                        <div class="lloji-sondazhit-zgjedhje selected" data-type="njezgjedhje">
+                            <h3>Nje zgjedhje</h3>
+                            <p>Votuesit mund te zgjedhin vetem nje kandidat</p>
+                        </div>
+                        <div class="lloji-sondazhit-zgjedhje" data-type="disazgjedhje">
+                            <h3>Disa zgjedhje</h3>
+                            <p>Votuesit mund te zgjedhin disa kandidate</p>
+                        </div>
+                    </div>
+                    <input type="hidden" id="llojiSondazhit" name="llojiSondazhit" value="njezgjedhje">
+                </div>
+
+                <div class="input">
+                    <label for="kohezgjatjaSondazhit">Gjatesia *</label>
+                    <select id="kohezgjatjaSondazhit" name="kohezgjatjaSondazhit" required tabindex="3">
+                        <option value="">Zgjidh gjatesine</option>
+                        <option value="1">1 dite</option>
+                        <option value="3">3 dite</option>
+                        <option value="7">1 jave</option>
+                        <option value="14">2 jave</option>
+                        <option value="30">1 muaj</option>
+                        <option value="tjeter">Vlere tjeter</option>
+                    </select>
+                    <div id="inputVlereTjeter">
+                        <input type="number" id="percaktimGjatesie" name="percaktimGjatesie" min="1" max="365" placeholder="Vendosni numrin e diteve">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grup-inputesh">
+                <h2>Kandidatet per votim</h2>
+                <div class="input">
+                    <div id="kandidatet" class="kandidatet">
+                        <div class="kandidati">
+                            <input type="text" name="kandidatet" placeholder="Kandidati 1" required>
+                            <button type="button" class="butoni-fshi" disabled>Fshi</button>
+                        </div>
+                        <div class="kandidati">
+                            <input type="text" name="kandidatet" placeholder="Kandidati 2" required>
+                            <button type="button" class="butoni-fshi" disabled>Fshi</button>
+                        </div>
+                    </div>
+                    <button type="button" id="butoniShto">+ Shto kandidat tjeter</button>
+                </div>
+            </div>
+            
+            <div class="shfaq-sondazhin">
+                <h2>Paraqitja e sondazhit</h2>
+                <div id="paraqitjaSondazhit">
+                    <h3 id="shfaqTitullin">Titulli i sondazhit do te shfaqet ketu</h3>
+                    <p id="shfaqPershkrimin">Pershkrimi i sondazhit do te shfaqet ketu</p>
+                    <div id="shfaqKandidatet"></div>
+                </div>
+            </div>
+            
+            <p id="mesazhGabimi"></p>
+            <button type="submit">Krijo sondazhin</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 VoteHub. Krijuar nga grupi 4.</p>
+    </footer>
+    <script src="../javascript/krijoVotim.js"></script>
+</body>
+</html>

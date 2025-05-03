@@ -1,0 +1,182 @@
+/* headeri */
+header {
+  background-color: #2e3b2f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 1.5rem;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #051f07;
+}
+
+#menu-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .active-nav {
+  display: none;
+}
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5; /* Sfond gri i lehtë për gjithë faqen */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Lartësia minimale sa ekrani */
+  }
+
+  .container {
+    display: flex; /* Përdoret për të ndarë panelin anësor dhe përmbajtjen kryesore */
+    flex: 1;
+  }
+
+  aside {
+    width: 270px; /* Gjerësia e panelit anësor (majtas) */
+    background-color: #d2f5e3; /* Ngjyra e sfondit të panelit */
+    padding: 20px;
+    border-right: 2px solid #a0dab8; /* Kufizim vizual me përmbajtjen kryesore */
+  }
+
+  .info-box {
+    background-color: white;
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Hijë për dizajn */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .main {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    color: #1b4d3e;
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out; /* Animacion për paraqitje të butë */
+  }
+
+  canvas {
+    max-width: 800px;
+    width: 100%;
+    animation: popIn 1s ease; /* Animacion gjatë ngarkimit të grafikës */
+  }
+
+  /* Butoni për rifreskimin e votave */
+  #refreshBtn {
+    background-color: #1b8a6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  /* Butoni për shkarkimin e rezultateve */
+  .download-btn {
+    margin-top: 20px;
+    background-color: #ff5757;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Animacionet */
+  @keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  /* Stilizimi i dropdown-it për filtrimin e zonave */
+  select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+
+  @media only screen and (max-width: 700px){
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+    }
+
+    .navbar {
+        position: absolute;
+        display: none;
+        right: 0;
+        width: 250px;
+        flex-direction: column;
+        background-color: #2e3b2f;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 0 8px;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar li {
+        margin: 0.75rem 0;
+    }
+
+    .navbar li:first-child {
+        margin-top: 0;
+    }
+
+    .navbar li a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+}

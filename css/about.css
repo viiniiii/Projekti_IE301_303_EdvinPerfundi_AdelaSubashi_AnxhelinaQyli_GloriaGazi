@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefefe;
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  section {
+    flex: 1;
+  }  
+
+ /* headeri */
+header {
+  background-color: #2e3b2f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 1.5rem;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #051f07;
+}
+
+#menu-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .active-nav {
+  display: none;
+}
+  
+  /* ===== Rreth stilimi ===== */
+  .krye {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .krye h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+  }
+
+  .pershkrim {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+
+  .kutia {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .teksti {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    padding: 30px 20px;
+    width: 280px;
+    text-align: center;
+  }
+
+  .teksti h3 {
+    color: #dd5c00;
+    margin-bottom: 10px;
+  }
+
+  .teksti p {
+    line-height: 1.6;
+  }
+  
+/* Footer */
+footer {
+  background-color: #2e3b2f;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* ====================== RESPONSIVE DESIGN ====================== */
+
+/* Pajisje të vogla (mobile) */
+@media (max-width: 480px) {
+  nav {
+    flex-wrap: nowrap;
+    flex-direction: row; /* ose thjesht hiq këtë krejt */
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto; /* nëse linket janë shumë të gjata */
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .teksti {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .krye {
+    padding: 10px;
+  }
+
+  .pershkrim {
+    font-size: 1rem;
+  }
+}
+
+/* Pajisje të mesme (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    flex-wrap: nowrap;
+    flex-direction: row; /* ose thjesht hiq këtë krejt */
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto; /* nëse linket janë shumë të gjata */
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+
+  .teksti {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Pajisje 769px – 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .teksti {
+    width: 45%;
+    max-width: 300px;
+  }
+}

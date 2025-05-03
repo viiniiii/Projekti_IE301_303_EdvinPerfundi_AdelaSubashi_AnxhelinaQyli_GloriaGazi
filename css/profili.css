@@ -1,0 +1,256 @@
+/* Stilizimi i përgjithshëm */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* headeri */
+header {
+  background-color: #2e3b2f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 1.5rem;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #051f07;
+}
+
+#menu-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .active-nav {
+  display: none;
+}
+
+main {
+  flex: 1;
+}
+
+/* Kontenier për të dhënat e profilit */
+.profil-container {
+  background-color: #fff;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profil-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profil-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #555;
+}
+
+.profil-container p strong {
+  color: #2e3b2f;
+}
+
+/* Butoni Edito Profilin */
+.buton-edito {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #115306;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 100%;
+  margin-left: -20px;
+}
+
+.buton-edito:hover {
+  background-color: #0d3e02;
+}
+
+/* Footer */
+footer {
+  background-color: #2e3b2f;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+/* Pajisje të vogla (mobile) */
+@media (max-width: 480px) {
+  #menu-icon {
+    display: block;
+    font-size: 30px;
+  }
+
+  .navbar {
+    position: absolute;
+    display: none;
+    right: 0;
+    width: 250px;
+    flex-direction: column;
+    background-color: #2e3b2f;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0 8px;
+  }
+
+  .navbar.active {
+    display: block;
+    z-index: 10;
+  }
+
+  .navbar li {
+    margin: 0.75rem 0;
+  }
+
+  .navbar li:first-child {
+    margin-top: 0;
+  }
+
+  .navbar li a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .profil-container {
+      padding: 15px;
+      margin: 20px auto;
+  }
+
+  .profil-container h2 {
+      font-size: 1.5rem;
+  }
+
+  .profil-container p {
+      font-size: 1rem;
+  }
+
+  .buton-edito {
+      font-size: 0.9rem;
+      padding: 10px 5px;
+      margin-left: -8px;
+  }
+}
+
+/* Pajisje të mesme (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    font-size: 30px;
+  }
+
+  .navbar {
+    position: absolute;
+    display: none;
+    right: 0;
+    width: 250px;
+    flex-direction: column;
+    background-color: #2e3b2f;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0 8px;
+  }
+
+  .navbar.active {
+    display: block;
+    z-index: 10;
+  }
+
+  .navbar li {
+    margin: 0.75rem 0;
+  }
+
+  .navbar li:first-child {
+    margin-top: 0;
+  }
+
+  .navbar li a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .profil-container {
+      padding: 20px;
+      margin: 30px auto;
+  }
+
+  .profil-container h2 {
+      font-size: 1.8rem;
+  }
+
+  .profil-container p {
+      font-size: 1.1rem;
+  }
+
+  .buton-edito {
+      font-size: 1rem;
+      padding: 12px 6px;
+      margin-left: -10px;
+  }
+}
+
+/* Pajisje të mëdha (desktops) */
+@media (min-width: 769px) {
+  .profil-container {
+      max-width: 900px;
+      padding: 30px;
+  }
+
+  .profil-container h2 {
+      font-size: 2rem;
+  }
+
+  .profil-container p {
+      font-size: 1.2rem;
+  }
+
+  .buton-edito {
+      font-size: 1.1rem;
+      padding: 14px 20px;
+  }
+}
