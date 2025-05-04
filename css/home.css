@@ -364,7 +364,7 @@ footer {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('voto.jpg');
+    background-image: url('../media/voto.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(8px) brightness(0.5);
