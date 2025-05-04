@@ -5,9 +5,18 @@
     --gri: #333;
 }
 
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/CustomFont.woff2') format('woff2');
+  } 
+
 *{
     padding: 0;
     margin: 0;
+}
+
+body{
+    font-family: 'CustomFont', sans-serif;
 }
 
 #logo{

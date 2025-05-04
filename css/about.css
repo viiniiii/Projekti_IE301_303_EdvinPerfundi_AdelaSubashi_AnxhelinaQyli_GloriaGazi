@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/CustomFont.woff2') format('woff2');
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'CustomFont', sans-serif;
     background-color: #fefefe;
     margin: 0px;
     padding: 0px;
@@ -13,7 +18,7 @@ body {
     flex: 1;
   }  
 
- /* headeri */
+/* headeri */
 header {
   background-color: #2e3b2f;
   color: white;
@@ -118,25 +123,6 @@ footer {
 
 /* Pajisje të vogla (mobile) */
 @media (max-width: 480px) {
-  nav {
-    flex-wrap: nowrap;
-    flex-direction: row; /* ose thjesht hiq këtë krejt */
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: auto; /* nëse linket janë shumë të gjata */
-  }
-
-  .nav-links {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
   .teksti {
     width: 100%;
     max-width: 100%;
@@ -152,25 +138,40 @@ footer {
 }
 
 /* Pajisje të mesme (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
-  nav {
-    flex-wrap: nowrap;
-    flex-direction: row; /* ose thjesht hiq këtë krejt */
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: auto; /* nëse linket janë shumë të gjata */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    font-size: 30px;
   }
 
-  .nav-links {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 15px;
+  .navbar {
+    position: absolute;
+    display: none;
+    right: 0;
+    width: 250px;
+    flex-direction: column;
+    background-color: #2e3b2f;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0 8px;
   }
 
-  .nav-links a {
-    font-size: 1rem;
+  .navbar.active {
+    display: block;
   }
 
+  .navbar li {
+    margin: 0.75rem 0;
+  }
+
+  .navbar li:first-child {
+    margin-top: 0;
+  }
+
+  .navbar li a {
+    display: block;
+    padding: 0.5rem 0;
+  }
 
   .teksti {
     width: 90%;

@@ -21,6 +21,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="vota-info">
             <h2>Këndi i Votimit</h2>
@@ -28,42 +29,48 @@
                 Këtu do të gjeni formularin që duhet të plotësoni për të votuar. <br>
                 Ju duhet të plotësoni me kujdes të gjitha fushat e kërkuara më poshtë dhe më pas të shtypni butonin <strong>"Dërgo votën"</strong>.<br>
                 Nëse ndodh ndonjë gabim nga pakujdesia, mund të shtypni butonin <strong>"Pastro"</strong> për ta kthyer faqen në formën fillestare.
-            </h3><div style="text-align: right; margin-top: 20px; margin-right: 10px;">
-                <a href="../html/kandidatet.html">
-                    <button type="button" style="padding: 8 16; background-color: #00672b; color: white; border: none; border-radius: 4; cursor: pointer;">
-                        Shiko më shumë rreth kandidatëve
-                    </button>
+            </h3>
+            <div style="text-align: right; margin-top: 20px; margin-right: 10px;">
+                <a href="../html/kandidatet.html" style="padding: 8px 16px; background-color: #00672b; color: white; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block;">
+                    Shiko më shumë rreth kandidatëve
                 </a>
             </div>
-            
         </section>
+
         <form id="formaVotimit">
             <label for="emri">Emri*</label><br>
             <input type="text" id="emri" name="emri" placeholder="Vendosni emrin tuaj" maxlength="10" tabindex="1" required><br>
+
             <label for="mbiemri">Mbiemri*</label><br>
             <input type="text" id="mbiemri" name="mbiemri" placeholder="Vendosni mbiemrin tuaj" maxlength="15" tabindex="2" required><br>
+
             <label for="nrID">Numri i ID*</label><br>
             <input type="text" id="nrID" name="nrID" placeholder="W00000000W" maxlength="10" tabindex="3" required><br>
+
             <label for="email">Email*</label><br>
             <input type="email" id="email" name="email" placeholder="email@domain.com" tabindex="4" required><br>
+
             <h3>Vendosni votën tuaj</h3>
             <div id="kandidatRadioContainer"></div>
+
             <button type="submit">Dërgo votën</button>
-            <button type="reset"> Pastro</button>
+            <button type="reset">Pastro</button>
         </form>
+
         <div id="msgKonfirmimi"></div>
     </main>
+
     <footer>
         <h3 class="pdfInfo">Legjislacioni për Shqipërinë:</h3>
         <ol>
-        <li><a href="../pdf/kushtetuta-ndryshuar.pdf" target="_blank" > Kushtetuta e Republikës së Shqipërisë</a></li> 
-        <li> <a href="../pdf/kodi-zgjedhor.pdf" target="_blank" > Kodi Zgjedhor</a></li>
-        <li><a href="../pdf/ligji-per-partite-politike-2020.pdf" target="_blank" > Ligji për Partitë Politike</a></li>
-        <li><a href="../pdf/ligji-dekriminalizimit.pdf" target="_blank" > Ligji i Dekriminalizimit </a></li>
-    </ol>
-    <p>&copy; 2025 VoteHub. Krijuar nga grupi 4.</p>
+            <li><a href="../pdf/kushtetuta-ndryshuar.pdf" target="_blank">Kushtetuta e Republikës së Shqipërisë</a></li>
+            <li><a href="../pdf/kodi-zgjedhor.pdf" target="_blank">Kodi Zgjedhor</a></li>
+            <li><a href="../pdf/ligji-per-partite-politike-2020.pdf" target="_blank">Ligji për Partitë Politike</a></li>
+            <li><a href="../pdf/ligji-dekriminalizimit.pdf" target="_blank">Ligji i Dekriminalizimit</a></li>
+        </ol>
+        <p>&copy; 2025 VoteHub. Krijuar nga grupi 4.</p>
     </footer>
+
     <script src="../javascript/voto.js"></script>
 </body>
 </html>
-

@@ -1,6 +1,11 @@
  /* Stili për sfondin dhe trupin e faqes */
+ @font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/CustomFont.woff2') format('woff2');
+}
+
  body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'CustomFont', sans-serif;
     background: url('https://iili.io/3jLR8OP.jpg') no-repeat center center fixed;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.85); /* transparencë për sfondin */

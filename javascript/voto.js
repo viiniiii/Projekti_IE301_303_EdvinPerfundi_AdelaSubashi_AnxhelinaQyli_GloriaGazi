@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const msgKonfirmimi = document.getElementById("msgKonfirmimi");
   const radioContainer = document.getElementById("kandidatRadioContainer");
 
-  // Lista e kandidatëve
+  // Lista e kandidateve
   const kandidatet = [
     "Arta Rama",
     "Bledi Hoxha",
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Aida Tafaj"
   ];
 
-  // Gjenerimi dinamik i radio buttons
+  // Gjenerimi dinamik i radio butonave
   kandidatet.forEach((emri) => {
     const label = document.createElement("label");
     const radio = document.createElement("input");
@@ -42,20 +42,20 @@ document.addEventListener("DOMContentLoaded", () => {
       msgKonfirmimi.style.color = "red";
       return;
     }
-        // Kontroll nëse ka votuar
-    // if (localStorage.getItem("hasVoted") === "true") {
-    //   msgKonfirmimi.innerText = "Ju keni votuar më parë!Nuk mund të votoni përsëri";
-    //   msgKonfirmimi.style.color = "orange";
-    //   return;
-    // }
+        // Kontroll nese ka votuar
+    if (localStorage.getItem("hasVoted") === "true") {
+      msgKonfirmimi.innerText = "Ju keni votuar më parë!Nuk mund të votoni përsëri";
+      msgKonfirmimi.style.color = "orange";
+      return;
+    }
     
 
-    // Drejto përdoruesin në faqen pas votimit
+    // Drejtimi i perdoruesit ne faqen falenderuese pas votimit
     window.location.href = "../html/mesazhPasVotimi.html";
   });
 });
 
-//per menune
+//Ikona e menuse
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
 

@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kandidatët - VoteHub</title>
-  <link rel="stylesheet" href="../css/kandidatet.css" />
+  <link rel="stylesheet" href="../css/kandidatet.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <header>
     <img id="logo" src="../media/logo.jpeg" alt="Logo-ja e website" width="75" height="40">
     <nav>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navbar">
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="voto.html">Voto</a></li>
-            <li><a href="rezultatet.html">Rezultatet</a></li>
-            <li><a href="profili.html">Profili</a></li>
-            <li><a href="login.html">Shkycu</a></li>
-        </ul>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="voto.html">Voto</a></li>
+        <li><a href="rezultatet.html">Rezultatet</a></li>
+        <li><a href="profili.html">Profili</a></li>
+        <li><a href="login.html">Shkycu</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
+
   <main>
     <h3 style="color: black; font-size: 16px;">Këtu gjeni informacion mbi kandidatët dhe qarkun se ku ata kandidojnë.</h3>
     <p id="paRezultat" style="display: none; text-align: center; margin-top: 20px; color: rgb(38, 36, 36);">
       Nuk u gjet asnjë kandidat me këtë informacion.
     </p>
+
     <div class="kerko-container">
       <input type="text" id="searchBar" placeholder="Kërko kandidatin" oninput="searchCandidates()">
     </div>
+
     <section id="candidatesGrid">
+      <h2 style="text-align: center; margin-bottom: 20px;">Lista e Kandidatëve</h2>
+
       <article class="kandidatet" data-name="Arta Rama" data-region="Tiranë">
         <figure>
           <img src="../media/kandidati1.jpg" alt="Arta Rama">
         </figure>
         <div class="info-kandidati">
           <h3>Arta Rama</h3>
-          <p> • Tiranë</p>
+          <p>• Tiranë</p>
           <p>Arta ka mbaruar studimet në Fakultetin e Drejtësisë, Universitetin e Tiranës në vitin 2006. Juriste me mbi 10 vite përvojë në administratën publike. Angazhohet për transparencë dhe mbrojtje të të drejtave qytetare.</p>
         </div>
       </article>
@@ -48,7 +53,7 @@
         <div class="info-kandidati">
           <h3>Bledi Hoxha</h3>
           <p>• Durrës</p>
-          <p>Bledi ka mbaruar studimet në Fakultetin Politeknik të Tiranës në vitin 2000. Ka përvojë si inxhinier ndërtimi me projekte tepër të suksesshme në  qytetin e Durrësit. Synon zhvillimin urban dhe përmirësimin e infrastrukturës rrugore.</p>
+          <p>Bledi ka mbaruar studimet në Fakultetin Politeknik të Tiranës në vitin 2000. Ka përvojë si inxhinier ndërtimi me projekte tepër të suksesshme në qytetin e Durrësit. Synon zhvillimin urban dhe përmirësimin e infrastrukturës rrugore.</p>
         </div>
       </article>
 
@@ -58,8 +63,8 @@
         </figure>
         <div class="info-kandidati">
           <h3>Azim Gjoni</h3>
-          <p> • Shkodër</p>
-          <p>Arta ka mbaruar studimet në vitin 1995 dhe është pedagog i njohur në Universitetin e Shkodrës. Përkrah investimet në arsim dhe promovimin e kulturës lokale.</p>
+          <p>• Shkodër</p>
+          <p>Azim ka mbaruar studimet në vitin 1995 dhe është pedagog i njohur në Universitetin e Shkodrës. Përkrah investimet në arsim dhe promovimin e kulturës lokale.</p>
         </div>
       </article>
 
@@ -69,26 +74,27 @@
         </figure>
         <div class="info-kandidati">
           <h3>Hëna Kona</h3>
-          <p> • Fier</p>
-          <p>Hëna ka mbaruar studimet në Fakultetin e Ekonomisë, Universitetin e Tiranës në vitin 1999.Ka punuar si ekonomiste dhe drejtuese projektesh zhvillimore për vite me radhe. Fokusin e ka te fuqizimi ekonomik i fermerëve dhe ndërmarrjeve të vogla.</p>
+          <p>• Fier</p>
+          <p>Hëna ka mbaruar studimet në Fakultetin e Ekonomisë, Universitetin e Tiranës në vitin 1999. Ka punuar si ekonomiste dhe drejtuese projektesh zhvillimore për vite me radhë. Fokusin e ka te fuqizimi ekonomik i fermerëve dhe ndërmarrjeve të vogla.</p>
         </div>
       </article>
+
       <article class="kandidatet" data-name="Aida Tafaj" data-region="Korçë">
         <figure>
           <img src="../media/kandidati5.webp" alt="Aida Tafaj">
         </figure>
         <div class="info-kandidati">
-          <h3>Aida Tafaj </h3>
-          <p> • Korçë</p>
-          <p>Aida ka mbaruar studimet në Fakultetin e Shkencave të Natyrës, Universitetin e Tiranës në vitin 1993.Arsimtare me përvojë dhe drejtore e një shkolle në Korçë. Angazhohet për një arsim më cilësor dhe gjithëpërfshirës..</p>
+          <h3>Aida Tafaj</h3>
+          <p>• Korçë</p>
+          <p>Aida ka mbaruar studimet në Fakultetin e Shkencave të Natyrës, Universitetin e Tiranës në vitin 1993. Arsimtare me përvojë dhe drejtore e një shkolle në Korçë. Angazhohet për një arsim më cilësor dhe gjithëpërfshirës.</p>
         </div>
       </article>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 VoteHub. Krijuar nga grupi 4.</p>
-</footer>
-
+  </footer>
 
   <script src="../javascript/kandidatet.js"></script>
 </body>

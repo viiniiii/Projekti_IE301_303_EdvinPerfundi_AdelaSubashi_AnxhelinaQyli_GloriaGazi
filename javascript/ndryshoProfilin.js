@@ -1,4 +1,4 @@
-//per menune
+//Ikona e menuse
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
 
@@ -16,12 +16,12 @@ document.getElementById('logo').addEventListener('click', () => {
   window.location.href = "../html/home.html";
 })
 
-// JavaScript për ngarkimin e fotos me Drag-and-Drop dhe klikimin
+// JavaScript per ngarkimin e fotos me Drag-and-Drop dhe klikimin
 const dropZone = document.getElementById('zonaUpload');
 const fileInput = document.getElementById('ngarkoFotografi');
 const fotoProfili = document.getElementById('fotoProfili');
 
-// Kur tërhiqet një skedar në zonën e "drop"
+// Kur terhiqet nje skedar ne zonen e "drop"
 dropZone.addEventListener('dragover', (event) => {
   event.preventDefault();
   dropZone.classList.add('dragging'); // Ndrysho ngjyrën e sfondit
@@ -32,33 +32,33 @@ dropZone.addEventListener('dragleave', () => {
   dropZone.classList.remove('dragging'); // Kthe në ngjyrën origjinale
 });
 
-// Kur skedari lirohet në zonë
+// Kur skedari vendoset ne zone
 dropZone.addEventListener('drop', (event) => {
   event.preventDefault();
   dropZone.classList.remove('dragging');
 
-  const file = event.dataTransfer.files[0]; // Merr skedarin e ngarkuar
+  const file = event.dataTransfer.files[0]; 
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      fotoProfili.src = e.target.result; // Vendos imazhin në foto
+      fotoProfili.src = e.target.result; 
     };
     reader.readAsDataURL(file);
   }
 });
 
-// Kur klikoni mbi zonën e "drop", hap input-in e skedarëve
+// Kur klikoni mbi zonen e "drop", hapet input-in e skedareve ne menyre manuale
 dropZone.addEventListener('click', () => {
-  fileInput.click(); // Hap input-in për zgjedhjen e skedarëve manualisht
+  fileInput.click(); 
 });
 
 // Kur skedari zgjidhet nga input-i i file
 fileInput.addEventListener('change', () => {
-  const file = fileInput.files[0]; // Merr skedarin e zgjedhur nga input
+  const file = fileInput.files[0];
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      fotoProfili.src = e.target.result; // Vendos imazhin në foto
+      fotoProfili.src = e.target.result; 
     };
     reader.readAsDataURL(file);
   }

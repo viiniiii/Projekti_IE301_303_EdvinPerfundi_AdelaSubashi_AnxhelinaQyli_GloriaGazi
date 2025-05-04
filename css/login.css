@@ -5,6 +5,15 @@
     --gri: #333;
 }
 
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/CustomFont.woff2') format('woff2');
+  } 
+
+  body{
+    font-family:'CustomFont', sans-serif;
+  }
+
 *{
     padding: 0;
     margin: 0;

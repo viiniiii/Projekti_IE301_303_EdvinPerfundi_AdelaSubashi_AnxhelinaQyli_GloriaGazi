@@ -37,13 +37,15 @@ document.getElementById("butoni").addEventListener("click", (e) => {
         return;
     }
 
+    const fjalekalimi = document.getElementById("fjalekalimi").value;
+    const konfirmoFjalekalimin = document.getElementById("konfirmoFjalekalimin").value;
+    
     const fjalekalimiRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
     if (!fjalekalimiRegex.test(fjalekalimi)) {
         mesazhGabimi.innerText = "Fjalëkalimi nuk përmbush kërkesat e sigurisë.";
         return;
     }
 
-    const fjalekalimi = document.getElementById("fjalekalimi").value;
     if (fjalekalimi !== konfirmoFjalekalimin) {
         mesazhGabimi.innerText = "Fjalëkalimet nuk përputhen!";
         return;

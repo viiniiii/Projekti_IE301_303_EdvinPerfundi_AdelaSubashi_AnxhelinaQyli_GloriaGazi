@@ -1,7 +1,12 @@
 /* Stilizimi i përgjithshëm */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/CustomFont.woff2') format('woff2');
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family:'CustomFont', sans-serif;
   background-color: #eaf1eb;
   color: #333;
 }

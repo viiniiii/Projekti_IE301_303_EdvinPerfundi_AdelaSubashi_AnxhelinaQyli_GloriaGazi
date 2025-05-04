@@ -5,6 +5,11 @@
     --gri: #333;
 }
 
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/CustomFont.woff2') format('woff2');
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +18,7 @@
 body {
     background-color: var(--jeshileHapur);
     color: var(--gri);
+    font-family: 'CustomFont', sans-serif;
 }
 
 /* headeri */

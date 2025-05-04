@@ -1,7 +1,12 @@
 /* Stilizimi i përgjithshëm */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/CustomFont.woff2') format('woff2');
+} 
+
 body {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'CustomFont', sans-serif;
   background-color: #d8e9d9;
   color: white;
 }

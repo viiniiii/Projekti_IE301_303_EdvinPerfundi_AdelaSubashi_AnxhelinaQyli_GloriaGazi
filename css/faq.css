@@ -5,10 +5,15 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/CustomFont.woff2') format('woff2');
+}
+
 html,
 body {
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family:'CustomFont', sans-serif;
   background-color: white;
   color: #2c3e2f;
 }
@@ -144,36 +149,13 @@ footer {
 
 /* 320px — 480px: Mobile devices */
 @media (max-width: 480px) {
-  nav {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: auto;
-    /* nëse linket janë shumë të gjata */
-  }
-
-  .nav-links {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
-
   .faq-kutia {
     width: 90%;
-    /* Zvogëlojmë gjerësinë e FAQ për ekranet më të vogla */
     padding: 20px;
-    /* Pak më shumë hapësirë brenda kutisë */
   }
 
   footer {
     font-size: 1rem;
-    /* Font më të vogël për ekrane më të vogla */
     padding: 1rem;
   }
 }

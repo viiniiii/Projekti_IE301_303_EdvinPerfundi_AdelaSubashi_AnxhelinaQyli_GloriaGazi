@@ -2,8 +2,8 @@
 <html lang="sq">
 <head>
   <!-- Përcaktimi i karaktereve dhe përshtatshmëria për pajisje të ndryshme -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt – VoteHub</title>
   <link rel="stylesheet" href="../css/kontakt.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -29,27 +29,28 @@
     <h2>Na Kontaktoni</h2>
     <form id="contactForm">
       <label for="name">Emri dhe Mbiemri *</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Emaili *</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" name="email" required>
 
       <label for="phone">Numri i telefonit *</label>
       <div class="phone-group">
         <!-- Zgjedhja e prefiksit të vendit -->
         <select id="countryCode" required>
+          <option value="" label="Zgjidhni prefiksin">Zgjidhni prefiksin</option>
           <option value="+355">🇦🇱 +355 (AL)</option>
           <option value="+39">🇮🇹 +39 (IT)</option>
           <option value="+49">🇩🇪 +49 (DE)</option>
           <option value="+1">🇺🇸 +1 (US)</option>
           <option value="+44">🇬🇧 +44 (UK)</option>
         </select>
-        <input type="tel" id="phone" name="phone" required pattern="\d{6,12}" placeholder="Numri pa prefiksin" />
+        <input type="tel" id="phone" name="phone" required pattern="\d{6,12}" placeholder="Numri pa prefiksin">
       </div>
       <div id="phoneError" class="error" style="display:none;">Ju lutem vendosni një numër të vlefshëm telefoni (6-12 shifra)</div>
 
       <label for="subject">Subjekti *</label>
-      <input type="text" id="subject" name="subject" required />
+      <input type="text" id="subject" name="subject" required>
 
       <label for="message">Mesazhi *</label>
       <textarea id="message" name="message" required></textarea>

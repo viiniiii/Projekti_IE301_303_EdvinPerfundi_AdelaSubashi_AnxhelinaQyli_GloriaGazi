@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="sq"> <!-- Përcakton që gjuha e faqes është shqip -->
+<html lang="sq">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Rezultatet Live – VoteHub</title> <!-- Titulli i faqes -->
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezultatet Live – VoteHub</title>
+  
+  <!-- Importimi i stilit dhe librarive të grafikëve Chart.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.css">
-  <link rel="stylesheet" href="../css/rezultatet.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../css/rezultatet.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-
- </head>
+</head>
 
 <body>
   <header>
@@ -29,50 +28,66 @@
     </nav>
 </header>
 
-  <!-- Përmbajtja kryesore e faqes -->
+  <!-- Përmbajtja kryesore me panelin anësor dhe grafikët -->
   <div class="container">
-    <!-- Paneli anësor me informacion shtesë -->
+    <!-- Paneli anësor me informacionet shtesë -->
     <aside>
+      <!-- Informacion mbi numrin e votuesve -->
       <div class="info-box">
-        <img src="..." alt="Numri i votuesve" />
-        <span>Votues: 1,254</span> <!-- Numri i përgjithshëm i votuesve -->
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Numri i votuesve">
+        <span>Votues: 1,254</span>
       </div>
+
+      <!-- Informacion mbi frekuencën e rifreskimit të të dhënave -->
       <div class="info-box">
-        <img src="..." alt="Rifreskim" />
-        <span>Rifreskim: çdo 10 sekonda</span> <!-- Informacion për intervalin e rifreskimit -->
+        <img src="https://cdn-icons-png.flaticon.com/512/1827/1827363.png" alt="Rifreskim">
+        <span>Rifreskim: çdo 10 sekonda</span>
       </div>
-      <div class="info-box" style="flex-direction: column;">
-        <label for="zoneFilter">Zgjidh zonën:</label>
-        <!-- Dropdown për filtrimin e të dhënave sipas zonës -->
-        <select id="zoneFilter">
+
+      <!-- Dropdown për filtrimin e të dhënave sipas zonës -->
+      <div class="info-box" style="flex-direction: column; align-items: flex-start;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Zona">
+          <label for="zoneFilter">Zgjidh zonën:</label>
+        </div>
+        <select id="zoneFilter" style="margin-top: 10px;">
           <option value="all">E gjithë Shqipëria</option>
-          <!-- Zona të ndryshme -->
           <option value="tirana">Tirana</option>
           <option value="durres">Durrës</option>
+          <option value="shkoder">Shkodër</option>
+          <option value="vlore">Vlorë</option>
+          <option value="elbasan">Elbasan</option>
+          <option value="fier">Fier</option>
+          <option value="korce">Korçë</option>
+          <option value="berat">Berat</option>
+          <option value="kukes">Kukës</option>
+          <option value="gjirokaster">Gjirokastër</option>
+          <option value="lezhe">Lezhë</option>
+          <option value="diber">Dibër</option>
         </select>
       </div>
     </aside>
 
-    <!-- Seksioni ku shfaqet grafiku dhe butonat -->
+    <!-- Seksioni kryesor ku paraqiten rezultatet -->
     <main class="main">
       <h2>Grafiku i votave për kandidatët</h2>
 
-      <!-- Shfaqja e numrit total të votave dhe butoni i rifreskimit -->
+      <!-- Numri total i votave dhe butoni për rifreskim -->
       <div class="vote-header">
         <h3>Total vota: <span id="totalVotes">0</span></h3>
         <button id="refreshBtn">Rifresko votat</button>
       </div>
 
-      <!-- Kanavacë për grafik -->
+      <!-- Canvas për vizatimin e grafikëve me Chart.js -->
       <canvas id="voteChart"></canvas>
 
-      <!-- Buton për shkarkim të rezultateve -->
+      <!-- Buton për shkarkimin e rezultateve si imazh -->
       <button class="download-btn" id="downloadBtn">
-        <img src="..." alt="Download icon" />
+        <img src="https://cdn-icons-png.flaticon.com/512/159/159078.png" alt="Download icon">
         Shkarko rezultatet
       </button>
     </main>
   </div>
-<script src="../javascript/rezultatet.js"></script>
+  <script src="../javascript/rezultatet.js"></script>
 </body>
 </html>

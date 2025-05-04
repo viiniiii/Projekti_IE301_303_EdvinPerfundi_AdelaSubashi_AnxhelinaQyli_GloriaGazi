@@ -1,4 +1,4 @@
-//per menune
+//Ikona e menuse
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
 
@@ -27,16 +27,16 @@ function searchCandidates() {
     let emriKandidatit = kandidati.dataset.name.toLowerCase();
     let rajoniKandidatit  = kandidati.dataset.region.toLowerCase();
     
-    // Kërko për emrin ose rajonin dhe ndrysho pamjen
-    if (emriKandidatit.includes(searchTerm) || rajoniKandidatit .includes(searchTerm)) {
-      kandidati.style.display = 'flex'; // Shfaq kandidatin
+  // Kerkimi per emrin ose rajonin per te shfaqur kandidatin
+    if (emriKandidatit.includes(searchTerm) || rajoniKandidatit.includes(searchTerm)) {
+      kandidati.style.display = 'flex'; 
       resultsFound = true;
     } else {
-      kandidati.style.display = 'none'; // Fsheh kandidatin
+      kandidati.style.display = 'none'; 
     }
   });
 
-  // Kontrollo nëse ka rezultate
+  // Kontrolli nese ka rezultate
   if (resultsFound) {
     joRezultat.style.display = 'none';
   } else {

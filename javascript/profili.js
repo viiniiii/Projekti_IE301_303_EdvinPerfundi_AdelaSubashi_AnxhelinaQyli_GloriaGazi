@@ -1,4 +1,4 @@
-//per menune
+//Ikona e menuse
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
 
@@ -16,16 +16,16 @@ document.getElementById('logo').addEventListener('click', () => {
   window.location.href = "../html/home.html";
 })
 
+// Funksioni i marrje se te dhenave e formularit dhe i shfaq si tekst
 document.addEventListener('DOMContentLoaded', function() {
-  // Funksioni që merr të dhënat e formularit dhe i shfaq si tekst
   const emri = "Gloria Gazi";
   const email = "gloriagazi@example.com";
   const telefon = "123-3456789";
   const gjinia = "Femer";
   const datelindja = "22-12-2003";
-  const fjalekalimi = "****";
+  const fjalekalimi = "**";
   
-// Shfaqim të dhënat në formën e tekstit
+// Shfaqja e te dhenave ne formen e tekstit
   const profiliDiv = document.getElementById('profiliTekst');
   profiliDiv.innerHTML = `
     <div class="profil-container">
