@@ -1,42 +1,50 @@
-/* Stilizimi i përgjithshëm */
+/* Fonts */
 @font-face {
   font-family: 'CustomFont';
   src: url('../fonts/CustomFont.woff2') format('woff2');
-} 
-
+}
+/* Stilizimi i body */
 body {
   margin: 0;
   font-family: 'CustomFont', sans-serif;
-  background-color: #d8e9d9;
+  background-color: #eaf1eb;
   color: white;
 }
 
-/* headeri */
+/* Header */
 header {
   background-color: #2e3b2f;
-  color: white;
+  color: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 #logo {
   border-radius: 8px;
 }
 
-.navbar {
+/*Nav bar */
+nav ul {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar li {
+nav ul li {
   margin-left: 1.5rem;
 }
 
-.navbar li a {
-  color: white;
+nav ul li a {
+  color: #fff;
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: bold;
@@ -44,36 +52,24 @@ header {
   transition: all 0.3s ease;
 }
 
-.navbar li a:hover {
+nav ul li a:hover,
+nav ul li a.aktive {
   color: #051f07;
 }
 
-#menu-icon {
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  display: none;
-}
-
-.navbar .active-nav {
-  display: none;
-}
-
-/* Permbajtja e main */
+/*  Main */
 main {
   display: grid;
   grid-template-columns: 1fr;
-  /* Zëvendësojmë me një kolonë për pajisje të vogla */
   padding: 40px;
-  color: white;
   background-color: #d8e9d9;
+  color: white;
 }
 
-/* Informacioni për votën */
+/* Informacioni i votes */
 .vota-info {
   color: #333;
   text-align: left;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .vota-info h2 {
@@ -89,18 +85,16 @@ main {
   line-height: 1.6;
 }
 
-/* Stilizimi i formularit */
+/* Forma e votimit */
 form {
   background: #3c4f3f;
-  padding: 30px;
+  padding: 30px 30px 20px;
   border-radius: 12px;
   max-width: 400px;
-  margin: auto;
-  padding-top: 20px;
   width: 100%;
+  margin: auto;
 }
 
-/* Inputet (tekst dhe email) */
 input[type="text"],
 input[type="email"] {
   width: 100%;
@@ -110,7 +104,6 @@ input[type="email"] {
   border: none;
 }
 
-/* Butonat e dergo voten dhe pastro */
 button {
   padding: 10px 20px;
   margin-top: 10px;
@@ -120,32 +113,43 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
 }
 
-/* Mesazh konfirmimi pasi perdoruesi ka votuar */
+.butoniShikoMeShume {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.butoniShikoMeShume button {
+  padding: 8px 16px;
+  background-color: #00672b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/*Msazhi i konfirmimit */
 #msgKonfirmimi {
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
 }
 
-/* Footer */
+/* Footer  */
 footer {
-  text-align: left;
   background-color: #2e3b2f;
+  color: white;
+  text-align: left;
   padding: 20px;
   font-weight: bold;
-  margin-top: 40px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 footer h3.pdfInfo {
   font-size: 20px;
-  text-align: left;
   color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 footer a {
@@ -157,50 +161,28 @@ footer a {
   padding: 2px 6px;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 footer p {
   text-align: center;
 }
 
-/* ====================== RESPONSIVE DESIGN ====================== */
+/*  Responsive  */
 
-/* Pajisje të vogla (mobile) */
+/* Pajisje te vogla (mobile) */
 @media (max-width: 480px) {
-  #menu-icon {
-    display: block;
-    font-size: 30px;
-  }
-
-  .navbar {
-    position: absolute;
-    display: none;
-    right: 0;
-    width: 250px;
+  nav {
     flex-direction: column;
-    background-color: #2e3b2f;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 0 8px;
+    align-items: center;
+    text-align: center;
   }
 
-  .navbar.active {
+  nav ul {
     display: block;
-    z-index: 10;
   }
 
-  .navbar li {
-    margin: 0.75rem 0;
-  }
-
-  .navbar li:first-child {
-    margin-top: 0;
-  }
-
-  .navbar li a {
-    display: block;
-    padding: 0.5rem 0;
+  nav ul li {
+    margin: 10px 0;
   }
 
   .vota-info {
@@ -218,45 +200,9 @@ footer p {
   }
 }
 
-/* Pajisje të mesme (tablets) */
+/* Pajisje te mesme (tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
-  #menu-icon {
-    display: block;
-    font-size: 30px;
-  }
-
-  .navbar {
-    position: absolute;
-    display: none;
-    right: 0;
-    width: 250px;
-    flex-direction: column;
-    background-color: #2e3b2f;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 0 8px;
-  }
-
-  .navbar.active {
-    display: block;
-  }
-
-  .navbar li {
-    margin: 0.75rem 0;
-  }
-
-  .navbar li:first-child {
-    margin-top: 0;
-  }
-
-  .navbar li a {
-    display: block;
-    padding: 0.5rem 0;
-  }
-
   main {
-    grid-template-columns: 1fr;
-    /* 1 kolonë për ekranet e mesme */
     padding: 20px;
   }
 
@@ -277,14 +223,9 @@ footer p {
   }
 }
 
-/* Pajisje më të mëdha (laptop ose desktop) */
+/* Pajisje te medha (desktop) */
 @media (min-width: 769px) {
   main {
     grid-template-columns: 1fr 1fr;
-    padding: 40px;
-  }
-
-  .vota-info h2 {
-    font-size: 28px;
   }
 }
