@@ -59,12 +59,14 @@ header {
   display: none;
 }
 
-/* Search Bar */
+#pjesaSiperme {
+  position: relative; 
+}
+
 .kerko-container {
   position: absolute;
-  top: 13%;
-  right: 7%;
-  margin: 0;
+  right: 0;
+  top: -75%;
 }
 
 #searchBar {
@@ -107,7 +109,6 @@ main {
   width: 100%;
   max-width: 600px;
 }
-
 
 .kandidatet img {
   width: 100px;
@@ -198,6 +199,24 @@ footer {
     margin-right: 0;
     margin-bottom: 15px;
   }
+
+  #searchBar{
+    width: 200px;
+}
+  
+  #searchBar:focus {
+    width: 275px;
+}
+
+  #pjesaSiperme{
+    margin-top: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .kerko-container {
+    top: -50%;
+  }
 }
 
 /* Pajisje të mesme (tablets) */
@@ -259,11 +278,30 @@ footer {
   .kerko-container{
     margin-top: 5%;
   }
+
+  #pjesaSiperme{
+    margin-top: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .kerko-container {
+    top: -50%;
+  }
 }
 
 /* Pajisje 769px – 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
   .kandidatet {
     width: 45%;
+  }
+
+  #pjesaSiperme{
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .kerko-container {
+    top: 0;
   }
 }
