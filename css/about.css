@@ -112,11 +112,16 @@ header {
   
 /* Footer */
 footer {
-  background-color: #2e3b2f;
-  color: white;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  padding: 0.2rem;
+  background-color: #2e3b2f;
+  margin-top: 2rem;
+  margin-top: auto; /* Siguron që footer-i të jetë në fund */
+  position: relative; /*  vendosje specifike */
+  bottom: 0;
 }
 
 /* ====================== RESPONSIVE DESIGN ====================== */
@@ -184,5 +189,27 @@ footer {
   .teksti {
     width: 45%;
     max-width: 300px;
+  }
+
+  html, body {
+    height: 100%; /* Siguron që faqja mbush ekranin e plotë */
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Siguron që përmbajtja të mbushë ekranin */
+  }
+
+  .krye {
+    flex-grow: 1; /* Siguron që kjo pjesë të marrë gjithë hapësirën e mundshme */
+  }
+
+  footer {
+    margin-top: auto; /* Siguron që footer-i shtyhet në fund */
+    position: relative;
+    bottom: 0;
   }
 }
