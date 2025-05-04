@@ -38,3 +38,7 @@ function gjejPerdoruesin(emaili, fjalekalimi){
     }
     return null;
 }
+
+document.getElementById('logo').addEventListener('click', () => {
+    window.location.href = "../html/home.html";
+  })

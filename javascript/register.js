@@ -64,3 +64,7 @@ function llogaritMoshen(datelindja) {
     }
     return mosha;
 }
+
+document.getElementById('logo').addEventListener('click', () => {
+    window.location.href = "../html/home.html";
+  })
